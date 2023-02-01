@@ -8,7 +8,7 @@ export const getHash = (value: string): string => {
     return crypto.createHash(HASH_ALGORITHM).update(value).digest("hex");
 }
 
-const convertToString = (candidate) => typeof candidate === "string" ? candidate : JSON.stringify(candidate);
+const convertToString = (candidate: any) => typeof candidate === "string" ? candidate : JSON.stringify(candidate);
 
 const getCandidate = (event?: any): string => {
     // Return TRIVIAL_PARTITION_KEY when no event is present
@@ -26,5 +26,5 @@ export const deterministicPartitionKey = (event?: any): string => {
         : candidate;
 };
 
-const candidate = deterministicPartitionKey({partitionKey: 1})
-console.log(typeof candidate)
+const candidate = deterministicPartitionKey()
+console.log(candidate)

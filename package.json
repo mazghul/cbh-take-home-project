@@ -5,7 +5,7 @@
   "main": " ",
   "scripts": {
     "test": "jest",
-    "start": "node dpk.ts"
+    "start": "ts-node dpk.ts"
   },
   "author": "",
   "license": "ISC",
