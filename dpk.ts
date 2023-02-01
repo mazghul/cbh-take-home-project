@@ -25,6 +25,3 @@ export const deterministicPartitionKey = (event?: any): string => {
         ? getHash(candidate)
         : candidate;
 };
-
-const candidate = deterministicPartitionKey()
-console.log(candidate)
